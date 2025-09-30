@@ -3,10 +3,10 @@ import { BlogController } from "./blog.controller";
 
 const router = Router();
 
-router.get("/", BlogController.getBlogs);           // GET all blogs
-router.get("/:id", BlogController.getBlogById);     // GET single blog
-router.post("/", BlogController.createBlog);        // CREATE blog
-router.put("/:id", BlogController.updateBlog);      // UPDATE blog
-router.delete("/:id", BlogController.deleteBlog);   // DELETE blog
+router.get("/", BlogController.getBlogs);
+router.get("/:id", BlogController.getBlogById);
+router.post("/", BlogController.createBlog);
+router.put("/:id", BlogController.updateBlog);
+router.delete("/:id", BlogController.deleteBlog);
 
-export default router;
+export const blogRoutes = router;

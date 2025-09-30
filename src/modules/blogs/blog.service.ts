@@ -3,12 +3,18 @@ import prisma from "../../prisma/client";
 const getAllBlogs = async () => {
   return prisma.blog.findMany({
     orderBy: { createdAt: "desc" },
+    include: {
+        user: true
+    }
   });
 };
 
 const getBlogById = async (id: number) => {
   return prisma.blog.findUnique({
     where: { id },
+    include: {
+        user: true
+    }
   });
 };
 
