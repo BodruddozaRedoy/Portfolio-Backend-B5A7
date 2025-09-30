@@ -15,6 +15,7 @@ model User {
   password  String
   bio       String?
   avatarUrl String?
+  skills    String[]
   social    Json?     
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
