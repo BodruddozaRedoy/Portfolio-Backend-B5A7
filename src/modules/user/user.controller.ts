@@ -1,13 +1,16 @@
 import { Request, Response } from "express";
-import * as userService from "./user.service";
+import { UserService } from "./user.service";
 
-export const getUsers = async (req: Request, res: Response) => {
-  const users = await userService.getAllUsers();
+const getUsers = async (req: Request, res: Response) => {
+  const users = await UserService.getAllUsers();
   res.json(users);
 };
 
-export const createUser = async (req: Request, res: Response) => {
+const createUser = async (req: Request, res: Response) => {
   const { name, email, password } = req.body;
-  const newUser = await userService.createUser({ name, email, password });
+  const newUser = await UserService.createUser({ name, email, password });
   res.status(201).json(newUser);
 };
+
+
+export const UserController = {getUsers, createUser}
