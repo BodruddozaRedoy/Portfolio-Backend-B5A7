@@ -2,8 +2,10 @@ import express from "express";
 import { userRoutes } from "./modules/user/user.routes";
 import { blogRoutes } from "./modules/blogs/blog.routes";
 import { projectRoutes } from "./modules/projects/project.routes";
+import dotenv from 'dotenv'
 
 const app = express();
+dotenv.config()
 
 app.use(express.json());
 
