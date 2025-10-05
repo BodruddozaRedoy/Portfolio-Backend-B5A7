@@ -42,7 +42,6 @@ const updateBlog = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Error updating blog", data: null, error });
   }
 };
-gw2283
 // DELETE blog
 const deleteBlog = async (req: Request, res: Response) => {
   try {
