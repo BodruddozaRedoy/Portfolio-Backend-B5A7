@@ -24,6 +24,7 @@ const getBlogById = async (req: Request, res: Response) => {
 
 // CREATE blog
 const createBlog = async (req: Request, res: Response) => {
+  console.log("create blog req",req.body)
   try {
     const newBlog = await BlogService.createBlog(req.body);
     res.status(201).json({ message: "Blog created successfully", data: newBlog });
@@ -41,7 +42,7 @@ const updateBlog = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Error updating blog", data: null, error });
   }
 };
-
+gw2283
 // DELETE blog
 const deleteBlog = async (req: Request, res: Response) => {
   try {
