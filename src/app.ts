@@ -20,8 +20,9 @@ app.use("/api/v1/blog", blogRoutes)
 app.use("/api/v1/project", projectRoutes)
 app.use("/api/v1/auth", authRoutes)
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 // Initial route 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("API is working");
 });
 

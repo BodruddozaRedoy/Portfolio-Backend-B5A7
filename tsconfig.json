@@ -33,7 +33,7 @@
     // Module Resolution
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
